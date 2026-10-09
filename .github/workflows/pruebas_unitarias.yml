@@ -14,14 +14,13 @@ jobs:
       - name: Descargar Codigo
         uses: actions/checkout@v4
 
-      - name: Descargar Codigo
-        uses: actions/checkout@v5
+      - name: Configurar Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - name: Instalar Dependencias
         run: pip install pytest
       
       - name: Ejecutar Pruebas
         run: pytest test_app.py
-
-
