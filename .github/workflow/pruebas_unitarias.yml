@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Descargar Codigo
+        uses: actions/checkout@v4
+
+      - name: Descargar Codigo
         uses: actions/checkout@v5
         with:
           python-version: '3.11'
@@ -20,5 +23,5 @@ jobs:
       
       - name: Ejecutar Pruebas
         run: pytest test_app.py
-        
+
 
